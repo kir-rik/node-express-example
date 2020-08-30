@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const session = require("express-session");
 const loggerMiddleware = require("./middlewares/logger");
+const nomoreMiddleware = require("./middlewares/nomore");
 
 const port = 3000;
 
@@ -16,6 +17,7 @@ app.use(
 );
 
 app.use(loggerMiddleware);
+app.use(nomoreMiddleware);
 
 app.post("/do-post", async (req, res) => {
   if (!req.session.callsCount) {
