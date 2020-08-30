@@ -1,0 +1,8 @@
+{
+  "name": "node-express-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/kir-rik/node-express-example.git",
+  "author": "kir_rik <kir-rik-90@yandex.ru>",
+  "license": "MIT"
+}
