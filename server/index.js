@@ -7,7 +7,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/show-get-params", (req, res) => {
-  res.send("???");
+  const divs = Object.keys(req.query).map(key => `<div>${key}: ${req.query[key]}</div>`)
+  const result = `<html><body>${divs.join('')}</body></html>`
+
+  res.send(result);
 });
 
 
