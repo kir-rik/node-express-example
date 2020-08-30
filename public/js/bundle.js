@@ -1,6 +1,6 @@
 {
   const button = document.getElementById("form-submit");
-  const form = document.getElementById("form");
+  const callsCount = document.getElementById("calls-count");
 
   button.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -9,9 +9,7 @@
     })
       .then((response) => response.text())
       .then((value) => {
-        const div = document.createElement("div");
-        div.innerHTML = value;
-        form.appendChild(div);
+        callsCount.innerHTML = value;
       })
       .catch((e) => console.log(e));
   });

@@ -6,9 +6,10 @@
   "author": "kir_rik <kir-rik-90@yandex.ru>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-session": "^1.17.1"
   },
   "scripts": {
-    "server": "node server/index.js"  
+    "server": "node server/index.js"
   }
 }
