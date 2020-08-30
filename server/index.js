@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const session = require("express-session");
+const loggerMiddleware = require("./middlewares/logger");
 
 const port = 3000;
 
@@ -13,6 +14,8 @@ app.use(
     secret: `${Math.random()}`,
   })
 );
+
+app.use(loggerMiddleware);
 
 app.post("/do-post", async (req, res) => {
   if (!req.session.callsCount) {
